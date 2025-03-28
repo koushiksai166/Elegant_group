@@ -1,0 +1,18 @@
+.project-details-section {
+    padding: 50px 0;
+    background-color: #f8f9fa; 
+}
+
+.map-container {
+    background-color: #e0e0e0; 
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center; 
+}
+
+.map-container img {
+    max-width: 100%; 
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
+}
