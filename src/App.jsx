@@ -1,4 +1,5 @@
 import React from 'react';
+import Top_bar from './components/Top_bar'; // Adjust the path if needed
 import Navbar from "./components/navbar/Navbar";
 import Header from './components/header/Header';
 import Form from "./components/form/Form";
@@ -17,6 +18,7 @@ import Amenities from './components/amenities/Amenities';
 function App() {
   return (
     <div id="Logo">
+      <Top_bar /> {/* Added here */}
       <Chatbot />
       <Brochure />
       <Navbar />
