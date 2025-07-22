@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css'; // Import your CSS file
+import { Container, Row, Col, Button, Form, Modal } from 'react-bootstrap';
+import { BiX } from 'react-icons/bi'; // Using a Bootstrap Icon
 
 const Contact = () => {
     const [showPopup, setShowPopup] = useState(false);
@@ -31,69 +33,62 @@ const Contact = () => {
     const handleCloseSubmitPopup = () => {
         setShowSubmitPopup(false);
         setShowPopup(false);
-        setFormData({ name: '', mobile: '', location: '' }); 
+        setFormData({ name: '', mobile: '', location: '' });
     };
 
     return (
-        <div id="Contact">
-            <div className="container" style={{ paddingTop: '50px' }}>
-                <div className="row bg-primary text-white text-center py-5">
-                    <div className="col">
+        <div id="Contact" className="py-5">
+            <div>
+                <Row className="bg-primary text-white text-center py-md-5 py-3">
+                    <Col>
                         <h2>Get in Touch, Let's Turn Your Investment into Reality!</h2>
-                        <button className="btn btn-light mt-3" onClick={handleContactUsClick}>
+                        <Button variant="light" className="mt-md-3 mt-2" onClick={handleContactUsClick}>
                             CONTACT US
-                        </button>
-                    </div>
-                </div>
-                <div className="row py-5" style={{ backgroundColor: '#f8f9fa' }}>
-                    <div className="col-md-6 offset-md-1">
-                        <div className="card p-4" style={{marginTop: '20px'}}>
-                            <h3 className="text-center mb-4">Contact Us</h3>
-                            <form onSubmit={handleSubmit}>
-                                <div className="mb-3">
-                                    <label htmlFor="name" className="form-label">Name*</label>
-                                    <input
+                        </Button>
+                    </Col>
+                </Row>
+                <Row className="py-md-5 py-4" style={{ backgroundColor: '#f8f9fa' }}>
+                    <Col md={6} className="offset-md-1 mt-md-0 mt-3">
+                        <div className="card p-md-4 p-3">
+                            <h3 className="text-center mb-md-4 mb-3">Contact Us</h3>
+                            <Form onSubmit={handleSubmit}>
+                                <Form.Group className="mb-3" controlId="name">
+                                    <Form.Label>Name*</Form.Label>
+                                    <Form.Control
                                         type="text"
-                                        className="form-control"
-                                        id="name"
                                         placeholder="Your Name"
                                         value={formData.name}
                                         onChange={handleInputChange}
                                         required
                                     />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="mobile" className="form-label">Mobile Number*</label>
-                                    <input
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="mobile">
+                                    <Form.Label>Mobile Number*</Form.Label>
+                                    <Form.Control
                                         type="tel"
-                                        className="form-control"
-                                        id="mobile"
                                         placeholder="Mobile Number"
                                         value={formData.mobile}
                                         onChange={handleInputChange}
                                         required
                                     />
-                                </div>
-                                <div className="mb-3">
-                                    <label htmlFor="location" className="form-label">Location</label>
-                                    <input
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="location">
+                                    <Form.Label>Location</Form.Label>
+                                    <Form.Control
                                         type="text"
-                                        className="form-control"
-                                        id="location"
                                         placeholder="Your Location"
                                         value={formData.location}
                                         onChange={handleInputChange}
                                     />
-                                </div>
+                                </Form.Group>
                                 <div className="d-grid">
-                                    <button type="submit" className="btn btn-primary">Submit</button>
+                                    <Button type="submit" variant="primary">Submit</Button>
                                 </div>
-                            </form>
+                            </Form>
                         </div>
-                    </div>
-
-                    <div className="col-md-4" style={{ marginTop: '20px' }}>
-                        <div className="card p-4">
+                    </Col>
+                    <Col md={4} className="mt-md-0 mt-3">
+                        <div className="card p-md-4 p-3">
                             <iframe
                                 title="Property Location"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30456.987654321!2d78.10243!3d16.50033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sWMF%20Peddyspelle%2C%20Telangana!5e0!3m2!1sen!2sus!4v1628787878787!5m2!1sen!2sus"
@@ -104,42 +99,42 @@ const Contact = () => {
                                 loading="lazy"
                             ></iframe>
                         </div>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </div>
-            {showPopup && (
-                <div className="popup-overlay">
-                    <div className="popup-content">
-                        <div className="popup-header">
-                            <h3>Contact Details</h3>
-                            <button className="close-button" onClick={handleClosePopup}>
-                                <i className="bi bi-x"></i>
-                            </button>
-                        </div>
-                        <div className="popup-body">
-                            <p><strong>Email:</strong> info@myelegantgroup.com</p>
-                            <p><strong>Phone:</strong> +1 123 456 7890</p>
-                            <p><strong>Address:</strong> My Home Hub, 7th Floor, Block 2, Madhapur, Hitechcity, Hyderabad,India</p>
-                            <p><strong>Website:</strong><a href='https://myelegantgroup.com/index.html'>My Elegant Group</a></p>
-                        </div>
-                    </div>
-                </div>
-            )}
-            {showSubmitPopup && (
-                <div className="popup-overlay">
-                    <div className="popup-content">
-                        <div className="popup-header">
-                            <h3>Submitted Successfully!</h3>
-                            <button className="close-button" onClick={handleCloseSubmitPopup}>
-                                <i className="bi bi-x"></i>
-                            </button>
-                        </div>
-                        <div className="popup-body">
-                            <p>Thank you for your submission!</p>
-                        </div>
-                    </div>
-                </div>
-            )}
+
+            {/* Contact Details Popup */}
+            <Modal show={showPopup} onHide={handleClosePopup} centered>
+                <Modal.Header closeButton>
+                    <Modal.Title>Contact Details</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p><strong>Email:</strong> info@myelegantgroup.com</p>
+                    <p><strong>Phone:</strong> +1 123 456 7890</p>
+                    <p><strong>Address:</strong> My Home Hub, 7th Floor, Block 2, Madhapur, Hitechcity, Hyderabad, India</p>
+                    <p><strong>Website:</strong><a href='https://myelegantgroup.com/index.html' target="_blank" rel="noopener noreferrer">My Elegant Group</a></p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClosePopup}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+            {/* Submission Successful Popup */}
+            <Modal show={showSubmitPopup} onHide={handleCloseSubmitPopup} centered>
+                <Modal.Header closeButton>
+                    <Modal.Title>Submitted Successfully!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <p>Thank you for your submission!</p>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={handleCloseSubmitPopup}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
 };

@@ -1,62 +1,86 @@
 import React from 'react';
-import "./About.css";
-import iconiaImage from '../../assets/gallery4.jpg';
-import iconiaImage2 from "../../assets/gallery3.jpg";
+import villaPlotImage from '../../assets/gallery4.jpg';
+import treeIcon from '../../assets/tree-icon.png';
+import locationIcon from '../../assets/location-icon.png';
+import builderIcon from '../../assets/builder-icon.png'; 
+import landIcon from '../../assets/land-icon.png'; 
+import plotIcon from '../../assets/plot-icon.png';
+import areaIcon from '../../assets/area-icon.png';
+import amenitiesIcon from '../../assets/amenities-icon.png';
 
 function About() {
   return (
-    <div id='About'>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6">
-            <div className="position-relative">
-              <img
-                src={iconiaImage2}
-                alt="Iconia Project"
-                className="img1 w-50"
-              />
-              <img
-                src={iconiaImage}
-                alt="Iconia Project"
-                className="img2 w-50"
-              />
+    <div id="About project">
+      <div className="px-3 px-sm-4 px-md-5 py-5" style={{ backgroundColor: '#d0e9fda5' }}>
+        {/* Top Section */}
+        <div className="row align-items-center gy-4">
+          {/* Text Content */}
+          <div className="col-12 col-md-6">
+            <h1 className="fw-bold text-dark text-uppercase">Villa Plots that bring you pride and fulfillment</h1>
+            <p className="mt-4">
+              Luxury Villa Plots for Sale in Shadnagar - Nestled in the
+              embrace of nature, Urbanrise Galleria Gardens is a luxurious
+              villa plots for sale near Hyderabad; perfectly situated in a
+              strategic location. Here, within this idyllic landscape, envision
+              crafting your dream villa plot, a sanctuary that embodies
+              both peace and security. Come, explore this open plots sale
+              in Shadnagar, Hyderabad.
+            </p>
+            <ul className="list-unstyled mt-4">
+              <li className="d-flex align-items-center mb-3">
+                <img src={treeIcon} alt="Lifestyle Opportunity" className="me-3" style={{ width: '40px', height: '40px' }} />
+                <span>A Lifestyle Opportunity</span>
+              </li>
+              <li className="d-flex align-items-center mb-3">
+                <img src={locationIcon} alt="Well Developed Location" className="me-3" style={{ width: '40px', height: '40px' }} />
+                <span>A Well Developed Location</span>
+              </li>
+              <li className="d-flex align-items-center mb-3">
+                <img src={builderIcon} alt="Real Estate Developer" className="me-3" style={{ width: '40px', height: '40px' }} />
+                <span>From South India's Largest Real Estate Developer</span>
+              </li>
+            </ul>
+          </div>
+
+          
+          <div className="col-12 col-md-6 text-center">
+            <img
+              src={villaPlotImage}
+              alt="Villa Plot Aerial View"
+              className="img-fluid rounded shadow"
+              style={{ maxHeight: '400px', objectFit: 'cover', width: '100%' }}
+            />
+          </div>
+        </div>
+
+        {/* Statistics Section */}
+        <div className="row mt-5 g-4 justify-content-center text-center">
+          <div className="col-6 col-sm-6 col-md-3">
+            <div className="p-3 border border-2 border-dark rounded-2 h-100">
+              <img src={landIcon} alt="Acres" style={{ width: '40px', height: '40px' }} className="mb-2" />
+              <div className="h4">34</div>
+              <small className="text-muted">Acres</small>
             </div>
           </div>
-          <div className="col-md-6 bg-light p-3 p-md-6" style={{ marginTop: '70px' }}>
-            <div className="text-section">
-              <div className="d-flex align-items-center mb-3">
-                <h2>ABOUT ICONIA</h2>
-              </div>
-              <p>
-                Invest in ICONIA, a luxurious 100-acre gated community project located on the Hyderabad-Bangalore Highway near Balanagar, Shadnagar. DTCP & RERA approved project with 100% clear title plots guarantee great returns on investment. Iconia Balanagar is strategically situated just 1 km from the Hyderabad-Bangalore National Highway-44 (soon to become a 12-lane Digital National Highway) at Balanagar near Shadnagar.
-              </p>
-              <p>
-                This prime location is very near to the proposed Regional Ring Road (RRR), which will connect various districts, enhancing the transportation infrastructure and providing seamless connectivity to key destinations. With these upcoming developments, Iconia Balanagar stands out as a premier investment opportunity.
-              </p>
+          <div className="col-6 col-sm-6 col-md-3">
+            <div className="p-3 border border-2 border-dark rounded-2 h-100">
+              <img src={plotIcon} alt="Plots" style={{ width: '40px', height: '40px' }} className="mb-2" />
+              <div className="h4">322</div>
+              <small className="text-muted">Plots</small>
             </div>
-            <div className="stats-section mt-4">
-              <div className="row justify-content-around">
-                <div className="col-6 col-md-3 text-center mb-3 mb-md-0">
-                  <i className="fas fa-map-marked-alt fa-3x"></i>
-                  <h3 className="mt-2">100+</h3>
-                  <p>ACRES</p>
-                </div>
-                <div className="col-6 col-md-3 text-center mb-3 mb-md-0">
-                  <i className="fas fa-home fa-3x"></i>
-                  <h3 className="mt-2">700+</h3>
-                  <p>PLOTS</p>
-                </div>
-                <div className="col-6 col-md-3 text-center mb-3 mb-md-0">
-                  <i className="fas fa-building fa-3x"></i>
-                  <h3 className="mt-2">150+</h3>
-                  <p>COTTAGES</p>
-                </div>
-                <div className="col-6 col-md-3 text-center">
-                  <i className="fas fa-users fa-3x"></i>
-                  <h3 className="mt-2">6+</h3>
-                  <p>SOCIAL ZONES</p>
-                </div>
-              </div>
+          </div>
+          <div className="col-6 col-sm-6 col-md-3">
+            <div className="p-3 border border-2 border-dark rounded-2 h-100">
+              <img src={areaIcon} alt="Sq. yds" style={{ width: '40px', height: '40px' }} className="mb-2" />
+              <div className="h4">165–400</div>
+              <small className="text-muted">Sq. yds</small>
+            </div>
+          </div>
+          <div className="col-6 col-sm-6 col-md-3">
+            <div className="p-3 border border-2 border-dark rounded-2 h-100">
+              <img src={amenitiesIcon} alt="Amenities" style={{ width: '40px', height: '40px' }} className="mb-2" />
+              <div className="h4">3.5</div>
+              <small className="text-muted">Acre of Amenities</small>
             </div>
           </div>
         </div>

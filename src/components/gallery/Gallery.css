@@ -1,53 +1,55 @@
-.gallery-section {
-    padding: 50px 0;
-    background-color: #f8f9fa;
+.amenities {
+  background-color: #f4fff4;
+  padding: 3rem 1rem;
+  text-align: center;
 }
 
-.gallery-scrollable {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+.amenities h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
-.gallery-scrollable::-webkit-scrollbar {
-    display: none;
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-.gallery-image {
-    width: 90%; 
-    max-width: 300px;
-    height: auto;
-    margin-right: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+.tab-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #555;
 }
 
-.gallery-image:hover {
-    transform: scale(1.02);
+.tab-buttons button.active {
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #0f9d58;
 }
 
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    cursor: pointer; 
+.tab-buttons button:hover {
+  color: #0f9d58;
 }
 
-.dot.active {
-    background-color: black;
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 5%;
 }
 
-@media (min-width: 768px) {
-    .gallery-image {
-        width: 300px; 
-    }
+.amenity-card img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }

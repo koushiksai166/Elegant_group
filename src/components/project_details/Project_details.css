@@ -1,18 +1,22 @@
-.project-details-section {
-    padding: 50px 0;
-    background-color: #f8f9fa; 
-}
-
-.map-container {
-    background-color: #e0e0e0; 
+.future-section {
+    background-image: url('../../assets/background1.jpg'); 
+    background-size: cover;
+    background-position: center ;
+    min-height: 500px;
+    display: flex;
+    align-items: center;    
+  }
+  
+  .glass-card {
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 15px;
     padding: 20px;
-    border-radius: 8px;
-    text-align: center; 
-}
-
-.map-container img {
-    max-width: 100%; 
-    height: auto;
-    display: block; 
-    margin: 0 auto; 
-}
+    backdrop-filter: blur(4px);
+    transition: transform 0.4s;
+  }
+  
+  .glass-card:hover {
+    transform: scale(1.05);
+  }
+  

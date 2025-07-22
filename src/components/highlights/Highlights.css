@@ -1,36 +1,18 @@
-.location-highlights-section {
-    padding: 50px 0;
-    background-color: #e6f7ff; 
-}
-
-.highlight-card {
-    background-color: #ffffff; 
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    min-height: 150px;
-}
-
-.highlight-card:hover {
-    transform: translateY(-5px);
-}
-
-.highlight-icon {
-    width: 60px; 
-    height: 60px;
-    margin-bottom: 20px;
-}
-
-.highlight-title {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 20px;
+.section-title {
+    font-weight: 900;
+    color: #2e2e2e;
+    margin-bottom: 2.5rem;
+  }
+  
+  .custom-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .custom-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
     color: #333;
-}
-
-.highlight-description {
-    font-size: 1rem;
-    color: #666;
-}
+  }
